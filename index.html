@@ -3,169 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML Tags Demo</title>
+  <title>Gourmet Bites - International Food Menu</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <h1>HTML Tags Demo Page</h1>
+    <h1>Gourmet Bites Restaurant</h1>
+    <p>Experience exquisite international dishes crafted by our world-class chefs.</p>
     <nav>
       <ul>
-        <li><a href="#text">Text</a></li>
-        <li><a href="#lists">Lists</a></li>
-        <li><a href="#media">Media</a></li>
-        <li><a href="#table">Table</a></li>
-        <li><a href="#form">Form</a></li>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#featured-section">Featured Item</a></li>
+        <li><a href="#food-display">Our Menu</a></li>
+        <li><a href="#specials-table">Today's Specials</a></li>
+        <li><a href="#order-form">Place Order</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
 
-    <article>
-      <h2>Welcome</h2>
-      <p>This page demonstrates commonly used HTML tags in a single document.</p>
+    <!-- Hero Section / Welcome -->
+    <article id="hero">
+      <h2>Welcome to Gourmet Bites</h2>
+      <p>We bring the finest culinary traditions from Italy, China, Thailand, and America right to your table. Every dish is prepared with fresh, premium ingredients to ensure an unforgettable dining experience.</p>
     </article>
 
-    <section id="text">
-      <h2>Text Elements</h2>
-      <p>This is a paragraph with <strong>strong text</strong>, <em>emphasized text</em>, <small>small text</small>, and <code>inline code</code>.</p>
-      <hr>
-      <blockquote>
-        <p>This is a blockquote. It is used to quote content from another source.</p>
-      </blockquote>
-      <pre>
-function hello() {
-  console.log("Hello, World!");
-}
-      </pre>
-      <p>This is a line of text.<br>This is on a new line after a line break.</p>
-
-      <h3>Heading Level 3</h3>
-      <h4>Heading Level 4</h4>
-      <h5>Heading Level 5</h5>
-      <h6>Heading Level 6</h6>
+    <!-- Featured Section -->
+    <section id="featured-section">
+      <h2>Featured Dish of the Day</h2>
+      <div id="image-container"></div>
     </section>
 
-    <section id="lists">
-      <h2>Lists</h2>
+    <!-- Dynamic Menu Section -->
+    <section id="food-display">
+      <h2>Our International Menu</h2>
+      <p>Filter by cuisine type or browse our selection below:</p>
+      
+      <!-- Cuisine Filter Controls -->
+      <div class="filter-controls">
+        <button class="filter-btn active" data-filter="all">All Cuisines</button>
+        <button class="filter-btn" data-filter="italian">Italian</button>
+        <button class="filter-btn" data-filter="chinese">Chinese</button>
+        <button class="filter-btn" data-filter="thai">Thai</button>
+        <button class="filter-btn" data-filter="american">American</button>
+      </div>
 
-      <h3>Unordered List</h3>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-      </ul>
-
-      <h3>Ordered List</h3>
-      <ol>
-        <li>Plan</li>
-        <li>Build</li>
-        <li>Test</li>
-      </ol>
-
-      <h3>Description List</h3>
-      <dl>
-        <dt>HTML</dt>
-        <dd>HyperText Markup Language</dd>
-        <dt>CSS</dt>
-        <dd>Cascading Style Sheets</dd>
-      </dl>
+      <div id="food-container"></div>
     </section>
 
-    <section id="media">
-      <h2>Links and Images</h2>
-      <p>Visit <a href="https://developer.mozilla.org">MDN Web Docs</a> to learn more about HTML.</p>
-
-      <figure>
-        <img src="https://placehold.co/600x200" alt="A placeholder image showing a gray rectangle">
-        <figcaption>This is a figure caption for the placeholder image.</figcaption>
-      </figure>
-
-      <h3>Audio</h3>
-      <audio controls>
-        <source src="sample.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-
-      <h3>Video</h3>
-      <video controls width="320">
-        <source src="sample.mp4" type="video/mp4">
-        Your browser does not support the video element.
-      </video>
-    </section>
-
-    <section id="table">
-      <h2>Table</h2>
+    <!-- Specials / Table Section -->
+    <section id="specials-table">
+      <h2>Chef's Special Offers & Info</h2>
       <table>
-        <caption>Programming Languages Comparison</caption>
+        <caption>Weekly Special Offers & Pricing Details</caption>
         <thead>
           <tr>
-            <th>Language</th>
-            <th>Type</th>
-            <th>Year</th>
+            <th>Dish Name</th>
+            <th>Cuisine</th>
+            <th>Original Price</th>
+            <th>Special Offer</th>
+            <th>Availability</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>HTML</td>
-            <td>Markup</td>
-            <td>1993</td>
+            <td>Pizza Margherita</td>
+            <td>Italian</td>
+            <td>฿249</td>
+            <td><strong>฿199 (20% Off)</strong></td>
+            <td>Everyday</td>
           </tr>
           <tr>
-            <td>CSS</td>
-            <td>Stylesheet</td>
-            <td>1996</td>
+            <td>Malattang Hot Pot</td>
+            <td>Chinese</td>
+            <td>฿349</td>
+            <td><strong>฿299</strong></td>
+            <td>Weekdays Only</td>
           </tr>
           <tr>
-            <td>JavaScript</td>
-            <td>Scripting</td>
-            <td>1995</td>
+            <td>Authentic Pad Thai</td>
+            <td>Thai</td>
+            <td>฿449</td>
+            <td><strong>฿399</strong></td>
+            <td>Everyday</td>
+          </tr>
+          <tr>
+            <td>Classic Burger</td>
+            <td>American</td>
+            <td>฿549</td>
+            <td><strong>฿499</strong></td>
+            <td>Weekends Only</td>
           </tr>
         </tbody>
       </table>
     </section>
 
-    <section id="form">
-      <h2>Contact Form</h2>
+    <!-- Contact & Order Form -->
+    <section id="order-form">
+      <h2>Reserve a Table or Order Online</h2>
       <form>
         <fieldset>
-          <legend>Your Information</legend>
+          <legend>Reservation & Order Details</legend>
 
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name">
+          <label for="name">Your Full Name:</label>
+          <input type="text" id="name" name="name" required placeholder="Enter your name">
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required placeholder="Enter your email">
 
-          <label for="topic">Topic:</label>
-          <select id="topic" name="topic">
-            <option value="">Select a topic</option>
-            <option value="html">HTML</option>
-            <option value="css">CSS</option>
-            <option value="js">JavaScript</option>
+          <label for="favorite-dish">Select Your Favorite Menu Item:</label>
+          <select id="favorite-dish" name="favorite-dish">
+            <option value="">-- Choose a dish --</option>
+            <option value="Pizza">Pizza Margherita</option>
+            <option value="Malattang">Malattang</option>
+            <option value="Pad thai">Pad Thai</option>
+            <option value="Burger">Classic Burger</option>
+            <option value="Pasta">Tomato Pasta</option>
           </select>
 
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="4"></textarea>
+          <label for="message">Special Requests or Instructions:</label>
+          <textarea id="message" name="message" rows="4" placeholder="Any allergies, vegetarian preferences, or delivery notes..."></textarea>
 
-          <button type="submit">Submit</button>
+          <button type="submit">Submit Order / Reservation</button>
         </fieldset>
       </form>
     </section>
 
+    <!-- Aside Notes -->
     <aside>
       <h2>Did You Know?</h2>
-      <p>The first version of HTML was published by Tim Berners-Lee in 1993.</p>
+      <p>Our traditional **Pasta** recipe has been passed down for three generations, and our authentic **Pad Thai** sauce is made with real tamarind pulp imported directly from Thailand!</p>
     </aside>
 
   </main>
 
   <footer>
-    <p>&copy; 2026 HTML Tags Demo. Built with <strong>HTML</strong> only.</p>
+    <p>&copy; 2026 Gourmet Bites Restaurant. All Rights Reserved. Built with HTML, CSS & JS.</p>
   </footer>
 
+  <script src="my-object.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
